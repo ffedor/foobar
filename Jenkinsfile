@@ -6,12 +6,12 @@ pipeline {
         sh 'echo Install stage'
       }
     }
-    stage('Build') 
+    stage('Build') {
       steps {
         sh 'echo Test stage'
       }
     }
-    stage('Test') 
+    stage('Test') {
       steps {
         sh 'echo Test stage'
       }
