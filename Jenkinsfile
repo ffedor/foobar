@@ -4,6 +4,9 @@ pipeline {
     stage('Install') {
       steps {
         sh 'echo Install stage'
+        dir('tests') {
+            git url: 'https://github.com/futurestay/Codeception_Test_Repo.git'
+        }
       }
     }
     stage('Build') {
