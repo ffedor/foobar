@@ -16,6 +16,7 @@ pipeline {
     stage('Build') {
       steps {
         sh 'echo Build stage'
+        sh 'touch build_stage_file'
       }
     }
     stage('Test') {
