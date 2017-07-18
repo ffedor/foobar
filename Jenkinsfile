@@ -7,6 +7,9 @@ pipeline {
         dir('tests') {
             git url: 'github-tests:futurestay/Codeception_Test_Repo.git'
         }
+        dir('tests/_data') {
+            sh '$(gunzip -c ./tests/_data/futurest_main.sql.gz | mysql -uroot futurest_main)'
+        }
       }
     }
     stage('Build') {
