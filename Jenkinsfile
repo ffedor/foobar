@@ -9,6 +9,7 @@ pipeline {
         }
         dir('tests/_data') {
             sh '$(gunzip -c ./futurest_main.sql.gz | mysql -uroot futurest_main)'
+            sh '$(gunzip -c ./futurest_FS12497.sql.gz | mysql -uroot futurest_FS12497)'
         }
       }
     }
