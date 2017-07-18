@@ -11,7 +11,7 @@ pipeline {
             sh '$(gunzip -c ./futurest_main.sql.gz | mysql -uroot futurest_main)'
             sh '$(gunzip -c ./futurest_FS12497.sql.gz | mysql -uroot futurest_FS12497)'
         }
-        sh 'cp ./tests/_data/custom_config.ini ./Config/'
+        sh 'cp ./tests/_data/custom_config.ini ./Config/custom_config.ini'
       }
     }
     stage('Build') {
